@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food LLC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobilestyle.css">
+    <link rel="stylesheet" href="tabletstyle.css">
+    <link rel="shortcut icon" href="images/Black and White Minimalist Geometric Restaurant Logo.png"
+        type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="lines" id="openSidebarBtn" onclick="clickme()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="logo">
+            <img src="images/Black_and_White_Minimalist_Geometric_Restaurant_Logo-removebg-preview2.png" alt="">
+        </div>
+        <div class="tab_nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#our_menu">Our Menu</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#contact_us">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="links">
+        <div class="closebarbtn">
+            <li><a href="#" class="closebtn">&times;</a></li>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#our_menu">Our Menu</a></li>
+            <li><a href="#reservation">Reservation</a></li>
+            <li><a href="#contact_us">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <div class="video">
+            <video autoplay muted loop>
+                <source src="images/WhatsApp Video 2024-05-25 at 14.15.49_a0c53b5e.mp4" type="video/mp4">
+            </video>
+            <div class="header_text">
+                <h2>WELCOME TO</h2>
+                <h1>FOOD LLC RESTAURANT</h1>
+                <a href="#" class="btn1">Order Now</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <section class="menu" id="our_menu">
+        <div class="menu_logo">
+            <h1>OUR MENU</h1>
+        </div>
+        <div class="cards">
+            <div class="tab_cards">
+                <div class="card">
+                    <h1 class="title">FASTFOOD</h1>
+                    <img class="chicken"
+                        src="images/136164110_5d75d031-2097-4aea-97ff-0c1d7a942547-removebg-preview.png" alt="">
+                    <div class="btn">
+                        <a href="fastfood.html">View More</a>
+                    </div>
+                </div>
+                <div class=" card">
+                    <h1 class=" title">CHINESE</h1>
+                    <img class="chicken" src="images/Untitled_design__16_-removebg-preview.png" alt="">
+                    <div class="btn">
+                        <a href="chinesefood.html">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class=" card">
+                <h1 class=" title">LUNCH</h1>
+                <img class="chinese" src="images/Untitled_design__17_-removebg-preview.png" alt="">
+                <div class="btn">
+                    <a href="lunch.html">View More</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="menubg"></div>
+    </section>
+
+    <section class="reservation" id="reservation">
+        <div class="container">
+            <div class="sec_title">
+                <h1>MAKE A RESERVATION</h1>
+                <p>To help us find the best table for you, select the perferred party size, date and time for you
+                    reservation </p>
+            </div>
+            <div class="reservationbg"></div>
+            <div class="inputs">
+                <div class="input1">
+                    <label>Party size</label>
+                    <input type="text" placeholder="2 people">
+                </div>
+                <div class="input1">
+                    <label>Date</label>
+                    <input type="date">
+                </div>
+                <div class="input1">
+                    <label>Time</label>
+                    <input type="time" placeholder="Time">
+                </div>
+                <div class="submitbtn">
+                    <a href="#">Find Table</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer" id="contact_us">
+        <div class="footer_container">
+            <div class="footer_content">
+                <h1>CONTACT</h1>
+                <p>TELL US WHAT YOU THINK AND HOW WE'RE DOING</p>
+            </div>
+            <div class="footer_form">
+                <div class="footer_input">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="number" placeholder="Phone">
+                    <textarea cols="20" rows="5" placeholder="Type your message here..."></textarea>
+                </div>
+            </div>
+            <div class="submitbtn">
+                <button type="submit">Submit</button>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="brand">
+                    <img src="images/Black_and_White_Minimalist_Geometric_Restaurant_Logo-removebg-preview2.png" alt=""
+                        class="footer_logo">
+                    <h1>FOOD LLC</h1>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h3>LINKS</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Reservation</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="fastfood.html">Fast Food</a></li>
+                            <li><a href="menu.html">chinese Food</a></li>
+                            <li><a href="#">Lunch</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="newsletter">
+                    <label for="newsletter-email">
+                        <p>Stay up to date on the latest from FOOD LLC</p>
+                    </label>
+                    <input type="email" id="newsletter-email" placeholder="Enter your e-mail address">
+                    <button type="submit">Sign Up</button>
+                    <div class="social-icons">
+                        <img src="images/facebook.png" alt="">
+                        <img src="images/instagram.png" alt="">
+                        <img src="images/twitter.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"> </script>
+</body>
+
+</html>
