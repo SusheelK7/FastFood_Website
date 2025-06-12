@@ -1,33 +1,55 @@
 pipeline {
     agent any
 
+    environment {
+        IMAGE_NAME = 'yourdockerhubusername/yourimagename'
+        DOCKER_CREDENTIALS_ID = 'docker-hub-creds'
+    }
+
     stages {
-        stage('Clone Code') {
+        stage('Clone Repository') {
             steps {
-                echo 'Using local workspace files or Git repo'
-                // If from Git, Jenkins will do this automatically.
+                git credentialsId: 'your-github-creds-id', url: 'https://github.com/yourusername/your-repo.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
+        }
+
+        stage('Run Unit Tests') {
+            steps {
+                sh 'pytest tests'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t fastfood-website .'
+                script {
+                    docker.build("${IMAGE_NAME}:latest")
+                }
             }
         }
 
-        stage('Stop Old Container') {
+        stage('Push Docker Image') {
             steps {
-                bat '''
-                docker stop fastfood-container || echo "No container to stop"
-                docker rm fastfood-container || echo "No container to remove"
-                '''
+                script {
+                    docker.withRegistry('https://index.docker.io/v1/', "${DOCKER_CREDENTIALS_ID}") {
+                        docker.image("${IMAGE_NAME}:latest").push()
+                    }
+                }
             }
         }
+    }
 
-        stage('Run New Container') {
-            steps {
-                bat 'docker run -d -p 8081:80 --name fastfood-container fastfood-website'
-            }
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed.'
         }
     }
 }
