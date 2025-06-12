@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git credentialsId: 'your-github-creds-id', url: 'https://github.com/yourusername/your-repo.git'
+                git credentialsId: 'your-github-creds-id', url: 'https://github.com/SusheelK7/FastFood_Website.git'
             }
         }
 
